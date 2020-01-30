@@ -1,3 +1,4 @@
+"use strict";
 const ingredients = [
   "Картошка",
   "Грибы",

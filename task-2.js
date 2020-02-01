@@ -11,8 +11,11 @@ const ingredientsList = document.querySelector("#ingredients");
 // ingredientsList.removeAttribute("id");
 // ingredientsList.setAttribute("class", "ingredients");
 
-ingredients.forEach(ingredient => {
+const ingredientsAsLi = ingredients.map(ingredient => {
   const ingredientLi = document.createElement("li");
   ingredientLi.textContent = ingredient;
-  ingredientsList.append(ingredientLi);
+  return ingredientLi;
 });
+
+//якщо я правильно зрозумів звуваження. тепер li створюються окремо, HTML змінюю окремо
+ingredientsList.append(...ingredientsAsLi);

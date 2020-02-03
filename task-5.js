@@ -6,7 +6,7 @@ const output = document.querySelector("#name-output");
 
 const inputTransmitter = function(event) {
   const value = event.target.value;
-  value ? (output.textContent = value) : (output.textContent = "незнакомец");
+  output.textContent = value ? value : "незнакомец";
 };
 
 input.addEventListener("input", inputTransmitter);

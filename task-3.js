@@ -19,9 +19,16 @@ const images = [
 
 const gallery = document.querySelector("#gallery");
 gallery.classList.add("css-gallery");
-images.forEach(image => {
-  gallery.insertAdjacentHTML(
+
+const imagesAsLi = images.map(image => {
+  const imageAsListItem = document.createElement("li");
+  imageAsListItem.insertAdjacentHTML(
     "beforeend",
-    `<li><img src=${image.url} alt=${image.alt}></li>`
+    `<img src="${image.url}" alt="${image.alt}">`
   );
+  imageAsListItem.setAttribute("class", "gallery__item");
+
+  return imageAsListItem;
 });
+
+gallery.append(...imagesAsLi);

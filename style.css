@@ -10,7 +10,14 @@
   border-color: #f44336;
 }
 
+/* стилі до task-3 */
 .css-gallery {
   display: flex;
   flex-direction: row;
+  list-style: none;
+}
+
+.gallery__item img {
+  width: 300px;
+  height: auto;
 }

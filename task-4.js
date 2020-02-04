@@ -11,12 +11,10 @@ const value = document.querySelector("#value");
 let currentValue = 0;
 
 const decrease = () => {
-  currentValue -= 1;
-  value.textContent = currentValue;
+  value.textContent = currentValue -= 1;
 };
 const increase = () => {
-  currentValue += 1;
-  value.textContent = currentValue;
+  value.textContent = currentValue += 1;
 };
 
 decrement.addEventListener("click", decrease);
